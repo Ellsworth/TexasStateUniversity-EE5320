@@ -1,0 +1,9 @@
+[submodule "zpu"]
+	path = zpu
+	url = https://github.com/zylin/zpu.git
+[submodule "coremark"]
+	path = coremark
+	url = https://github.com/eembc/coremark.git
+[submodule "zpugcc"]
+	path = zpugcc
+	url = https://github.com/zylin/zpugcc.git
