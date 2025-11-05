@@ -23,18 +23,12 @@
           sha256 = "0bknwqba1sz0vvhq6hjpqh28i8r4a9g9kjiv721al68np4r1accp"; # you must compute accurate hash: run `nix-prefetch-url` or `nix-prefetch-git`
         };
 
-        nativeBuildInputs = [
-          pkgs.gcc9
-          pkgs.binutils
-          pkgs.bison
-          pkgs.flex
-          pkgs.texinfo
-          pkgs.gmp
-          pkgs.mpfr
-          pkgs.libmpc
-          pkgs.isl
-          pkgs.gnumake
-        ];
+nativeBuildInputs = [
+  pkgs.gcc9 pkgs.binutils pkgs.bison pkgs.flex pkgs.texinfo
+  pkgs.gmp pkgs.mpfr pkgs.libmpc pkgs.isl pkgs.gnumake
+  pkgs.updateAutotoolsGnuConfigScriptsHook
+];
+
 
         buildPhase = ''
           cd toolchain
